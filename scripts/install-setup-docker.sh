@@ -15,4 +15,7 @@ sudo apt install resolvconf -y
 echo "nameserver 8.8.4.4" >> /etc/resolvconf/resolv.conf.d/head
 echo "nameserver 8.8.8.8" >> /etc/resolvconf/resolv.conf.d/head
 
-# Install docker-compose
+# Install docker-compose and get execuatble access
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
