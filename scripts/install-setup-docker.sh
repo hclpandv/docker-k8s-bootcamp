@@ -12,8 +12,8 @@ sudo apt-get install docker.io -y
 
 # Install dns resolver and add DNS entries
 sudo apt install resolvconf -y
-echo 'nameserver 8.8.4.4' | sudo tee -a /etc/resolvconf/resolv.conf.d/head
-echo 'nameserver 8.8.8.8' | sudo tee -a /etc/resolvconf/resolv.conf.d/head
+echo 'nameserver 8.8.4.4' | sudo tee -a /etc/resolv.conf
+echo 'nameserver 8.8.8.8' | sudo tee -a /etc/resolv.conf
 
 sudo service resolvconf restart
 
